@@ -1,0 +1,7 @@
+{
+  "products":[
+    {"id":1,"name":"Nitro 5"      ,   "price":4000},
+    {"id":2,"name":"Moto G7 power"      ,   "price":1000},
+    {"id":3,"name":"Relógio Casio"      ,   "price":100}
+  ]
+  }
