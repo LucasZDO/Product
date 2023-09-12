@@ -2,12 +2,25 @@
   Cadastro de Produto
 </div>
 
+<form [formGroup]="formGroupProduct">
+  <div class="mb-3">
+    <label for="name" class="form-label">Nome:</label>
+    <input type="text" class="form-control" id="name" formControlName="name" name="name">
+  </div>
+  <div class="mb-3">
+    <label for="price" class="form-label">Preço:</label>
+    <input type="text" class="form-control" id="price" formControlName="price" price="price">
+  </div>
+  <button  class="btn btn-primary"(click)="save()">Salvar</button>
+</form>
+
 <table class="table table-striped">
   <thead>
     <tr>
       <th scope="col">Id</th>
       <th scope="col">Produto</th>
       <th scope="col">Preço</th>
+      <th scope="col">Opções</th>
     </tr>
   </thead>
   <tbody>
@@ -15,6 +28,7 @@
       <th scope="row">{{p.id}}</th>
       <td>{{p.name}}</td>
       <td>{{p.price}}</td>
+      <td><button class="btn btn_danger" (click)="delete(p)" >Remover</button></td>
     </tr>
   </tbody>
 </table>
